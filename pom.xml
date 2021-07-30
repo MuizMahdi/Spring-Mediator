@@ -7,7 +7,7 @@
    <groupId>com.muizz.spring.mediator</groupId> <!-- io.github.muizmahdi -->
    <artifactId>spring-mediator</artifactId>
    <name>${project.groupId}:${project.artifactId}</name>
-   <description>Mediator pattern implementation using Spring's IoC container</description>
+   <description>A utility for requests handling using the mediator pattern and Spring's IoC container</description>
    <version>1.0.0</version>
    <url>https://github.com/MuizMahdi/spring-mediator</url>
    <packaging>jar</packaging>
