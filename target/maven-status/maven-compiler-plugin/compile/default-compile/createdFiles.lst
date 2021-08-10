@@ -1,8 +1,0 @@
-com/muizz/spring/mediator/core/Handler.class
-com/muizz/spring/mediator/annotations/RequestHandler.class
-com/muizz/spring/mediator/payload/ApiRequest.class
-com/muizz/spring/mediator/core/Mediator.class
-com/muizz/spring/mediator/configuration/YamlPropertySourceFactory.class
-com/muizz/spring/mediator/core/MediatorImpl.class
-com/muizz/spring/mediator/configuration/SpringMediatorConfig.class
-com/muizz/spring/mediator/payload/ApiResponse.class

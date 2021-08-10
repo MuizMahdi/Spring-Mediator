@@ -8,7 +8,7 @@
    <artifactId>spring-mediator</artifactId>
    <name>${project.groupId}:${project.artifactId}</name>
    <description>A utility for requests handling using the mediator pattern and Spring's IoC container</description>
-   <version>1.0.0</version>
+   <version>1.0.1</version>
    <url>https://github.com/MuizMahdi/spring-mediator</url>
    <packaging>jar</packaging>
 
@@ -56,21 +56,15 @@
       </dependency>
 
       <dependency>
-         <groupId>org.springframework.boot</groupId>
-         <artifactId>spring-boot-starter-data-r2dbc</artifactId>
-         <version>${spring.boot.version}</version>
-      </dependency>
-
-      <dependency>
          <groupId>junit</groupId>
          <artifactId>junit</artifactId>
          <version>4.11</version>
          <scope>test</scope>
       </dependency>
-      
+
    </dependencies>
 
-   
+
    <distributionManagement>
       <snapshotRepository>
          <id>ossrh</id>
@@ -180,5 +174,5 @@
          </build>
       </profile>
    </profiles>
-   
+
 </project>
