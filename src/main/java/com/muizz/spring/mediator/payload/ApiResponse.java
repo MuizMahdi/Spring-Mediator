@@ -1,10 +1,11 @@
 package com.muizz.spring.mediator.payload;
 
+import java.io.Serializable;
 
 /**
  * Represents an API response 
  */
-public class ApiResponse {
+public class ApiResponse implements Serializable {
 
     private Object payload;     // Json data of the response
     private boolean success;    // Success status
@@ -12,51 +13,50 @@ public class ApiResponse {
     private Object error;       // Json of error messages or warnings
 
 
-    public ApiResponse() { }
-
-    public ApiResponse(
-        Object payload,
-        boolean success,
-        int status,
-        Object error
-    ) {
-        this.payload = payload;
-        this.success = success;
-        this.status = status;
-        this.error = error;
-    }
+    private ApiResponse() { }
 
 
-    public void setPayload(Object payload) {
-        this.payload = payload;
-    }
+    public static class Builder {
 
-    public Object getPayload() {
-        return payload;
-    }
+        private Object payload;
+        private boolean success;
+        private int status;
+        private Object error;
 
-    public void setSuccess(boolean success) {
-        this.success = success;
-    }
+        public Builder successful() {
+            this.success = true;
+            return this;
+        }
 
-    public boolean getSuccess() {
-        return success;
-    }
+        public Builder failed() {
+            this.success = false;
+            return this;
+        }
 
-    public void setStatus(int status) {
-        this.status = status;
-    }
+        public Builder withPayload(Object payload) {
+            this.payload = payload;
+            return this;
+        }
 
-    public int getStatus() {
-        return status;
-    }
+        public Builder withError(Object error) {
+            this.error = error;
+            return this;
+        }
 
-    public void setError(Object error) {
-        this.error = error;
-    }
+        public Builder ofStatus(int status) {
+            this.status = status;
+            return this;
+        }
 
-    public Object getError() {
-        return error;
+        public ApiResponse build() {
+            var apiResponse = new ApiResponse();
+            apiResponse.success = this.success;
+            apiResponse.payload = this.payload;
+            apiResponse.error = this.error;
+            apiResponse.status = this.status;
+            return apiResponse;
+        }
+
     }
 
 }
